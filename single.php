@@ -61,7 +61,7 @@
                     <li><a href="single.php?id=1">Gallery 1</a></li>
                     <li><a href="single.php?id=2">Gallery 2</a></li>
                     <li><a href="single.php?id=3">Gallery 3</a></li>
-                    <li><a href="single.php?id=4">Gallery 4</a></li>                 
+                    <li><a href="single.php?id=4">Gallery 4</a></li>                  
                    
                   </ul>
                 </li>              
@@ -84,7 +84,7 @@
               </ul>
             </div>
 
-            <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+            <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
 
           </div>
 
@@ -95,42 +95,62 @@
 
 
 
-    <div class="container-fluid" data-aos="fade" data-aos-delay="500">
-      <div class="row">
-        <div class="col-lg-4">
+    <div class="site-section"  data-aos="fade">
+      <div class="container-fluid">
 
-          <div class="image-wrap-2">
-            <div class="image-info">
-              <h2 class="mb-3">Gallery 1</h2>
-              <a href="single.php?id=1" class="btn btn-outline-white py-2 px-4">More Photos</a>
-            </div>
-            <img src="images/old_bridge2.JPG" alt="Image" class="img-fluid">
-          </div>
+        <div class="row justify-content-center">
+
+        
 
         </div>
-        <div class="col-lg-4">
-
-          <div class="image-wrap-2">
-            <div class="image-info">
-              <h2 class="mb-3">Gallery 2</h2>
-              <a href="single.php?id=2" class="btn btn-outline-white py-2 px-4">More Photos</a>
-            </div>
-            <img src="images/wanderers2.JPG" alt="Image" class="img-fluid">
+        <div class="row" id="lightgallery">
+            <?php 
+                $galleryName=$_GET['id'];
+                if($galleryName==1){
+            ?>
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/old_bridge.JPG" data-sub-html="<h4>166x122cm</h4><p>Opis slike ako zelis</p>">
+            <a href="#"><img src="images/old_bridge2.JPG" alt="IMage" class="img-fluid"></a>
+          </div>          
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/act2.JPG" data-sub-html="<h4>166x122cm</h4><p>Opis slike ako zelis</p>">
+            <a href="#"><img src="images/act2.JPG" alt="IMage" class="img-fluid"></a>
           </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/wanderers2.JPG" data-sub-html="<h4>166x122cm</h4><p>Opis slike ako zelis</p>">
+            <a href="#"><img src="images/wanderers2.JPG" alt="IMage" class="img-fluid"></a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/old_bridge.JPG" data-sub-html="<h4>166x122cm</h4><p>Opis slike ako zelis</p>">
+            <a href="#"><img src="images/old_bridge2.JPG" alt="IMage" class="img-fluid"></a>
+          </div>          
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/act2.JPG" data-sub-html="<h4>166x122cm</h4><p>Opis slike ako zelis</p>">
+            <a href="#"><img src="images/act2.JPG" alt="IMage" class="img-fluid"></a>
+          </div>
+          <?php 
+            }
+            ?>
+             <?php                 
+                if($galleryName==2){
+                ?>
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/wanderers2.JPG" data-sub-html="<h4>166x122cm</h4><p>Opis slike ako zelis</p>">
+            <a href="#"><img src="images/wanderers2.JPG" alt="IMage" class="img-fluid"></a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/old_bridge.JPG" data-sub-html="<h4>166x122cm</h4><p>Opis slike ako zelis</p>">
+            <a href="#"><img src="images/old_bridge2.JPG" alt="IMage" class="img-fluid"></a>
+          </div>      
+          <?php 
+            }
+            ?> 
+            <?php 
+                
+                if($galleryName==3){
+                ?>   
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/act2.JPG" data-sub-html="<h4>166x122cm</h4><p>Opis slike ako zelis</p>">
+            <a href="#"><img src="images/act2.JPG" alt="IMage" class="img-fluid"></a>
+          </div>
+          <?php 
+            }
+            ?> 
+         
 
         </div>
-        <div class="col-lg-4">
-
-          <div class="image-wrap-2">
-            <div class="image-info">
-              <h2 class="mb-3">Gallery 3</h2>
-              <a href="single.php?id=3" class="btn btn-outline-white py-2 px-4">More Photos</a>
-            </div>
-            <img src="images/act2.JPG" alt="Image" class="img-fluid">
-          </div>
-
-        </div>
-   
       </div>
     </div>
 
