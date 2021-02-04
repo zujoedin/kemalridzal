@@ -167,12 +167,7 @@
           </div>
           <div class="col-lg-3 ml-auto">
             <div class="mb-3">
-              <p class="mb-0 font-weight-bold text-white">Address</p>
-              <p class="mb-4">Tvoja adresa</p>
-
-              <p class="mb-0 font-weight-bold text-white">Phone</p>
-              <p class="mb-4"><a href="#">+387 61 492 844</a></p>
-
+        
               <p class="mb-0 font-weight-bold text-white">Email Address</p>
               <p class="mb-0"><a href="#">kemal_ridzal@hotmail.com</a></p>
 
