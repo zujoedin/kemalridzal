@@ -74,4 +74,5 @@ if (!$mail->send()) {
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
     header("Location: ../contact.php?success='yes'");
+    
 }
