@@ -30,7 +30,7 @@ $mail->isSMTP();
 // SMTP::DEBUG_OFF = off (for production use)
 // SMTP::DEBUG_CLIENT = client messages
 // SMTP::DEBUG_SERVER = client and server messages
-$mail->SMTPDebug = SMTP::DEBUG_SERVER;
+$mail->SMTPDebug = SMTP::DEBUG_OFF;
 
 //Set the hostname of the mail server
 $mail->Host = 'smtp.gmail.com';
@@ -56,17 +56,18 @@ $mail->setFrom(''.$email.'', ''.$fname.' '.$lname.'');
 
 
 //Set who the message is to be sent to
-$mail->addAddress('kemalridzalart@gmail.com', 'John Doe');
+$mail->addAddress('kemalridzalart@gmail.com', 'Kemal Ridzal');
+$mail->AddReplyTo($email, ''.$fname.' '.$lname.'');
 
 //Set the subject line
 $mail->Subject = $subject;
 
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
-
-$mail->Body = $message;
+$mail->IsHTML(true);
+$mail->Body = $email."<br>".$message;
 //Replace the plain text body with one created manually
-$mail->AltBody = 'This is a plain-text message body';
+
 
 
 //send the message, check for errors
