@@ -76,7 +76,7 @@
                 </li>
                   
                 <li>
-				<a href="https://www.instagram.com/kemalridzal/" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+				          <a href="https://www.instagram.com/kemalridzal/" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
                 </li>
                  
               </ul>
@@ -114,14 +114,21 @@
           for ($i=0; $i<count($all_files); $i++)
             {
                    
-              $image_name = $all_files[$i];
+              $image_location = $all_files[$i];
               $supported_format = array('gif','jpg','jpeg','png');
-              $ext = strtolower(pathinfo($image_name, PATHINFO_EXTENSION));
+              $ext = strtolower(pathinfo($image_location, PATHINFO_EXTENSION));
               if (in_array($ext, $supported_format))
                   {
-                    
-                    echo '<div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="'.$image_name .'" data-sub-html="<h4>"'.$image_name .'"</h4>
-                    <a href="#"><img src="'.$image_name .'" alt="'.$image_name .'" class="img-fluid"></a>
+                    $image_name = explode  ("/",$image_location);
+                    $image_name = $image_name[2];
+
+                    foreach($supported_format as $format){
+                      $image_name = str_replace(".".$format,"",$image_name);
+                    }
+
+
+                    echo '<div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="'.$image_location .'" data-sub-html="<h4>'.$image_name .'</h4>
+                    <a href="#"><img src="'.$image_location .'" alt="'.$image_location .'" class="img-fluid"></a>
                   </div>';
                   } else {
                       continue;
